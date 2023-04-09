@@ -266,6 +266,7 @@ std::string upload_commodity(std::string _id_buyer, std::string _id_seller, std:
 | :--: | :-- |
 | HTTPRequestGetTest | Project to test http request about get ,z.B:http://140.113.213.57:5125/view_commodity |
 | HTTPRequestPostTest | Project to test http request about post ,z.B:http://140.113.213.57:5125/enroll_member |
+| FunctionYest |Project to test all the functions with response of sting formed in JSON |
 
 ## About reference
 

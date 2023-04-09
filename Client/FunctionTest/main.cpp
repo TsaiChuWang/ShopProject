@@ -6,7 +6,7 @@
 #include <fstream>
 #include "HTTPRequest.hpp"
 
-//µù¥U·sªº·|­û
+//è¨»å†Šæ–°çš„æœƒå“¡
 std::string enroll_member(std::string name_member, std::string email_member, std::string password_member) {
     try
     {
@@ -26,7 +26,7 @@ std::string enroll_member(std::string name_member, std::string email_member, std
     return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
 }
 
-//µn¤J¤w¦³ªº·|­û±b¸¹
+//ç™»å…¥å·²æœ‰çš„æœƒå“¡å¸³è™Ÿ
 std::string login_member(std::string email_member, std::string password_member) {
     try
     {
@@ -46,7 +46,7 @@ std::string login_member(std::string email_member, std::string password_member) 
     return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
 }
 
-//Àx­È¨ì²{¦³±b¸¹
+//å„²å€¼åˆ°ç¾æœ‰å¸³è™Ÿ
 int store_balance(std::string _id, int balance_member) {
     
     std::string balance = std::to_string(balance_member);
@@ -68,7 +68,7 @@ int store_balance(std::string _id, int balance_member) {
     return -1;
 }
 
-//¤W¶Ç°Ó«~°â½æ
+//ä¸Šå‚³å•†å“å”®è³£
 std::string upload_commodity(std::string _id_seller, std::string name_commodity,int price, int inventory) {
     std::string pricestr= std::to_string(price);
     std::string inventorystr = std::to_string(inventory);
@@ -90,7 +90,7 @@ std::string upload_commodity(std::string _id_seller, std::string name_commodity,
     return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
 }
 
-//¬d¬İ°Ó«~¦Cªí
+//æŸ¥çœ‹å•†å“åˆ—è¡¨
 std::string view_commodity() {
     try
     {
@@ -109,7 +109,7 @@ std::string view_commodity() {
     return "ERROR";
 }
 
-//B¦VAÁÊ¶R°Ó«~
+//Bå‘Aè³¼è²·å•†å“
 std::string buy_commodity(std::string _id_buyer, std::string _id_seller, std::string _id_commdity, int number) {
     std::string numberstr = std::to_string(number);
     try
