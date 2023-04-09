@@ -110,7 +110,7 @@ std::string view_commodity() {
 }
 
 //B向A購買商品
-std::string upload_commodity(std::string _id_buyer, std::string _id_seller, std::string _id_commdity, int number) {
+std::string buy_commodity(std::string _id_buyer, std::string _id_seller, std::string _id_commdity, int number) {
     std::string numberstr = std::to_string(number);
     try
     {
@@ -136,7 +136,7 @@ int main(int argc, const char* argv[])
     std::cin >> a;
     std::string str = "";
     if (a == 0) {
-        str = enroll_member("test_member_A","test_member_A@gmail.com","12345678");
+        str = enroll_member("test_member_C","test_member_C@gmail.com","12345678");
         std::cout << str << std::endl;
     }
     else if (a == 1) {
@@ -156,7 +156,7 @@ int main(int argc, const char* argv[])
         std::cout << str << std::endl;
     }
     else if (a == 5) {
-        str = upload_commodity("fc5c7e5dd6b111ed941508002765f803", "c667e7c9d67511edb74a08002765f803", "491dd85fd68411ed9c4a08002765f803", 2);
+        str = buy_commodity("fc5c7e5dd6b111ed941508002765f803", "c667e7c9d67511edb74a08002765f803", "491dd85fd68411ed9c4a08002765f803", 2);
         std::cout << str << std::endl;
     }else std::cout << "error\n";
 
