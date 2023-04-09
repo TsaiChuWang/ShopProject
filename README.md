@@ -1,5 +1,8 @@
 # ShopProject
 
+
+![ 架構圖](./images/structure.png)
+
 ## Functions
 
 ### Enroll Member 註冊會員
@@ -24,11 +27,12 @@ _id,name_member,date_enrolled,email_member,password_member,balance_member
 | _id | string | 會員的uuid |
 
 ```cpp
+//註冊新的會員
 std::string enroll_member(std::string name_member, std::string email_member, std::string password_member) {
     try
     {
         http::Request request{ "http://140.113.213.57:5125/enroll_member" };
-        const std::string body = "{\"name_member\": \"+name_member+\", \"email_member\": \"+email_member+\", \"password_member\": \"+password_member+\"}";
+        const std::string body = "{\"name_member\": \""+name_member+"\", \"email_member\": \"" +email_member+"\", \"password_member\": \"" +password_member+"\"}";
         const auto response = request.send("POST", body, {
             {"Content-Type", "application/json"}
             });
