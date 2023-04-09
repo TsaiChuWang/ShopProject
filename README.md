@@ -11,7 +11,7 @@
 |Parameter| Type | Illustration |
 | :--: | :--: | :-- |
 | name_member | string | 會員名稱 |
-| email_member | string | 會員的emaul,視作帳號使用 |
+| email_member | string | 會員的email,視作帳號使用 |
 | password_member | string | 會員的密碼 |
 
 **Database**
@@ -47,7 +47,50 @@ std::string enroll_member(std::string name_member, std::string email_member, std
     return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
 }
 ```
+### Login Member Account 登入會員
 
+**Input**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| email_member | string | 會員的email,視作帳號使用 |
+| password_member | string | 會員的密碼 |
+
+**Database**
+
+Find data about member with atttributes and return 
+_id,name_member,date_enrolled,email_member,password_member,balance_member
+
+**Output**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| _id | string | 會員的uuid |
+| name_member | string | 會員名稱 |
+| date_enrolled | date | 會員的註冊日期 |
+| email_member | string | 會員的email,視作帳號使用 |
+| password_member | string | 會員的密碼 |
+| balance_member | int | 會員的餘額 |
+
+```cpp
+//登入已有的會員帳號
+std::string login_member(std::string email_member, std::string password_member) {
+    try
+    {
+        http::Request request{ "http://140.113.213.57:5125/login_member" };
+        const std::string body = "{\"email_member\": \"" + email_member + "\", \"password_member\": \"" + password_member + "\"}";
+        const auto response = request.send("POST", body, {
+            {"Content-Type", "application/json"}
+            });
+        std::cout << "_id= " << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
+        return std::string{ response.body.begin(), response.body.end() };
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Request failed, error: " << e.what() << '\n';
+    }
+
+    return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
+}
+```
 
 ## About server
 
