@@ -234,17 +234,16 @@ Count the number * price to be total trade money.
 **Output**
 |Parameter| Type | Illustration |
 | :--: | :--: | :-- |
-| _id_commodity | string | 商品的uuid |
+| result | string | 交易結果 |
 
 ```cpp
-//上傳商品售賣
-std::string upload_commodity(std::string _id_seller, std::string name_commodity,int price, int inventory) {
-    std::string pricestr= std::to_string(price);
-    std::string inventorystr = std::to_string(inventory);
+//B向A購買商品
+std::string upload_commodity(std::string _id_buyer, std::string _id_seller, std::string _id_commdity, int number) {
+    std::string numberstr = std::to_string(number);
     try
     {
-        http::Request request{ "http://140.113.213.57:5125/upload_commodity" };
-        const std::string body = "{\"_id_seller\": \"" + _id_seller + "\", \"name_commodity\": \"" + name_commodity + "\", \"price\": \"" + pricestr + "\", \"inventory\": \"" + inventorystr+"\"}";
+        http::Request request{ "http://140.113.213.57:5125/buy_commodity" };
+        const std::string body = "{\"_id_buyer\": \"" + _id_buyer + "\", \"_id_seller\": \"" + _id_seller + "\", \"_id_commdity\": \"" + _id_commdity + "\", \"number\": \"" + numberstr + "\"}";
         const auto response = request.send("POST", body, {
             {"Content-Type", "application/json"}
             });

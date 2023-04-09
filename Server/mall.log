@@ -507,3 +507,131 @@
 [I 20230406 10:38:28 _internal:224]  * Restarting with stat
 [W 20230406 10:38:29 _internal:224]  * Debugger is active!
 [I 20230406 10:38:29 _internal:224]  * Debugger PIN: 116-236-382
+[I 20230406 12:57:02 mall_server:180] Init member database
+[I 20230406 12:57:02 mall_server:183] Init commodity database
+[I 20230406 12:57:02 _internal:224] 111.71.144.69 - - [06/Apr/2023 12:57:02] "GET /clear_database HTTP/1.1" 200 -
+[I 20230406 12:57:02 _internal:224] 111.71.144.69 - - [06/Apr/2023 12:57:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[I 20230406 13:28:41 _internal:224] 101.3.2.55 - - [06/Apr/2023 13:28:41] "[33mGET /get_test/ HTTP/1.1[0m" 404 -
+[I 20230406 13:30:30 _internal:224] 101.3.2.55 - - [06/Apr/2023 13:30:30] "[33mGET /get_test/ HTTP/1.1[0m" 404 -
+[I 20230406 14:50:09 _internal:224] 101.3.2.55 - - [06/Apr/2023 14:50:09] "[33mGET /clear_database/ HTTP/1.1[0m" 404 -
+[I 20230406 14:59:33 _internal:224] 101.3.2.55 - - [06/Apr/2023 14:59:33] "[33mGET /get_test/ HTTP/1.1[0m" 404 -
+[I 20230406 15:00:56 mall_server:172] GET TEST REQUEST
+[I 20230406 15:00:56 _internal:224] 101.3.2.55 - - [06/Apr/2023 15:00:56] "GET /get_test HTTP/1.1" 200 -
+[I 20230406 15:02:30 _internal:224]  * Detected change in 'c:\\Users\\wtsaichu\\Desktop\\APIs\\brother\\mall_server.py', reloading
+[I 20230406 15:02:30 _internal:224]  * Restarting with stat
+[W 20230406 15:02:32 _internal:224]  * Debugger is active!
+[I 20230406 15:02:32 _internal:224]  * Debugger PIN: 116-236-382
+[I 20230406 15:06:09 _internal:224]  * Detected change in 'c:\\Users\\wtsaichu\\Desktop\\APIs\\brother\\mall_server.py', reloading
+[I 20230406 15:06:09 _internal:224]  * Restarting with stat
+[W 20230406 15:06:10 _internal:224]  * Debugger is active!
+[I 20230406 15:06:10 _internal:224]  * Debugger PIN: 116-236-382
+[I 20230406 15:09:12 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230406 15:09:12 _internal:224] 101.3.2.55 - - [06/Apr/2023 15:09:12] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230406 15:14:18 mall_server:172] GET TEST REQUEST
+[I 20230406 15:14:18 _internal:224] 101.3.2.55 - - [06/Apr/2023 15:14:18] "GET /get_test HTTP/1.1" 200 -
+[I 20230406 15:15:00 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230406 15:15:00 _internal:224] 101.3.2.55 - - [06/Apr/2023 15:15:00] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230406 15:16:55 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230406 15:16:55 _internal:224] 101.3.2.55 - - [06/Apr/2023 15:16:55] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230406 15:18:37 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230406 15:18:37 _internal:224] 49.159.180.220 - - [06/Apr/2023 15:18:37] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230406 15:19:53 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230406 15:19:53 _internal:224] 101.3.2.55 - - [06/Apr/2023 15:19:53] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230406 15:20:48 mall_server:172] GET TEST REQUEST
+[I 20230406 15:20:48 _internal:224] 101.3.2.55 - - [06/Apr/2023 15:20:48] "GET /get_test HTTP/1.1" 200 -
+[I 20230408 10:19:25 _internal:224] 23.224.186.38 - - [08/Apr/2023 10:19:25] "[33mGET / HTTP/1.1[0m" 404 -
+[E 20230408 10:19:43 _internal:224] 23.224.186.38 - - [08/Apr/2023 10:19:43] code 400, message Bad request syntax ('\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01')
+[I 20230408 10:19:43 _internal:224] 23.224.186.38 - - [08/Apr/2023 10:19:43] "[35m[1m[0m" HTTPStatus.BAD_REQUEST -
+[E 20230408 11:04:19 _internal:224] 23.224.186.38 - - [08/Apr/2023 11:04:19] code 400, message Bad request syntax ('\x02')
+[I 20230408 11:04:19 _internal:224] 23.224.186.38 - - [08/Apr/2023 11:04:19] "[35m[1m[0m" HTTPStatus.BAD_REQUEST -
+[I 20230408 12:34:30 mall_server:172] GET TEST REQUEST
+[I 20230408 12:34:30 _internal:224] 49.159.180.220 - - [08/Apr/2023 12:34:30] "GET /get_test HTTP/1.1" 200 -
+[I 20230408 16:37:13 _internal:224] 49.159.180.220 - - [08/Apr/2023 16:37:13] "[33mGET /ymnets/p/6255674.html HTTP/1.1[0m" 404 -
+[I 20230408 16:37:35 _internal:224] 49.159.180.220 - - [08/Apr/2023 16:37:35] "[33mGET /ymnets/p/6255674.html HTTP/1.1[0m" 404 -
+[I 20230408 16:37:55 _internal:224] 49.159.180.220 - - [08/Apr/2023 16:37:55] "[33mGET /ymnets/p/6255674.html HTTP/1.1[0m" 404 -
+[I 20230408 19:00:21 mall_server:172] GET TEST REQUEST
+[I 20230408 19:00:21 _internal:224] 49.159.180.220 - - [08/Apr/2023 19:00:21] "GET /get_test HTTP/1.1" 200 -
+[I 20230408 19:14:18 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 19:14:18 _internal:224] 49.159.180.220 - - [08/Apr/2023 19:14:18] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:18:46 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:18:46 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:18:46] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:30:13 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:30:13 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:30:13] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:30:26 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:30:26 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:30:26] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:45:59 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:45:59 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:45:59] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:46:56 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:46:56 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:46:56] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:47:43 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:47:43 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:47:43] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:48:43 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:48:43 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:48:43] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 20:49:03 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 20:49:03 _internal:224] 49.159.180.220 - - [08/Apr/2023 20:49:03] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 21:09:28 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 21:09:28 _internal:224] 49.159.180.220 - - [08/Apr/2023 21:09:28] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 21:18:04 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 21:18:04 _internal:224] 49.159.180.220 - - [08/Apr/2023 21:18:04] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 21:26:00 mall_server:208] Enroll A New Member e769f97dd61011eda16c08002765f803
+[I 20230408 21:26:00 _internal:224] 49.159.180.220 - - [08/Apr/2023 21:26:00] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230408 22:18:43 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 22:18:43 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:18:43] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 22:21:45 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230408 22:21:45 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:21:45] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230408 22:28:26 mall_server:186] Init member database
+[I 20230408 22:28:26 mall_server:189] Init commodity database
+[I 20230408 22:28:26 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:28:26] "GET /clear_database HTTP/1.1" 200 -
+[I 20230408 22:31:38 mall_server:208] Enroll A New Member 12b23cd3d61a11ed820c08002765f803
+[I 20230408 22:31:38 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:31:38] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230408 22:31:53 mall_server:186] Init member database
+[I 20230408 22:31:53 mall_server:189] Init commodity database
+[I 20230408 22:31:53 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:31:53] "GET /clear_database HTTP/1.1" 200 -
+[I 20230408 22:37:29 mall_server:208] Enroll A New Member e36242fed61a11ed9cff08002765f803
+[I 20230408 22:37:29 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:37:29] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230408 22:37:39 mall_server:186] Init member database
+[I 20230408 22:37:39 mall_server:189] Init commodity database
+[I 20230408 22:37:39 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:37:39] "GET /clear_database HTTP/1.1" 200 -
+[I 20230408 22:51:43 mall_server:208] Enroll A New Member e0a70200d61c11ed863a08002765f803
+[I 20230408 22:51:43 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:51:43] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230408 22:51:58 mall_server:186] Init member database
+[I 20230408 22:51:58 mall_server:189] Init commodity database
+[I 20230408 22:51:58 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:51:58] "GET /clear_database HTTP/1.1" 200 -
+[I 20230408 22:53:12 mall_server:208] Enroll A New Member 157d7266d61d11ed839508002765f803
+[I 20230408 22:53:12 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:53:12] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230408 22:53:44 mall_server:186] Init member database
+[I 20230408 22:53:44 mall_server:189] Init commodity database
+[I 20230408 22:53:44 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:53:44] "GET /clear_database HTTP/1.1" 200 -
+[I 20230408 22:54:03 mall_server:208] Enroll A New Member 345ef246d61d11ed972408002765f803
+[I 20230408 22:54:03 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:54:03] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230408 22:59:53 mall_server:186] Init member database
+[I 20230408 22:59:53 mall_server:189] Init commodity database
+[I 20230408 22:59:53 _internal:224] 49.159.180.220 - - [08/Apr/2023 22:59:53] "GET /clear_database HTTP/1.1" 200 -
+[I 20230409 09:28:04 mall_server:208] Enroll A New Member c667e7c9d67511edb74a08002765f803
+[I 20230409 09:28:04 _internal:224] 49.159.180.220 - - [09/Apr/2023 09:28:04] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230409 09:38:56 mall_server:228] LOGIN SUCESS
+[I 20230409 09:38:56 _internal:224] 49.159.180.220 - - [09/Apr/2023 09:38:56] "POST /login_member HTTP/1.1" 200 -
+[I 20230409 09:39:23 mall_server:228] LOGIN SUCESS
+[I 20230409 09:39:23 _internal:224] 49.159.180.220 - - [09/Apr/2023 09:39:23] "POST /login_member HTTP/1.1" 200 -
+[I 20230409 10:07:59 mall_server:228] LOGIN SUCESS
+[I 20230409 10:07:59 _internal:224] 49.159.180.220 - - [09/Apr/2023 10:07:59] "POST /login_member HTTP/1.1" 200 -
+[I 20230409 10:22:25 mall_server:249] MEMBER c667e7c9d67511edb74a08002765f803 STORE MONEY 200 DOLLOR SUCCESS,TOTAL: 200
+[I 20230409 10:22:25 _internal:224] 49.159.180.220 - - [09/Apr/2023 10:22:25] "POST /store_balance HTTP/1.1" 200 -
+[I 20230409 10:34:14 mall_server:249] MEMBER c667e7c9d67511edb74a08002765f803 STORE MONEY 200 DOLLOR SUCCESS,TOTAL: 400
+[I 20230409 10:34:14 _internal:224] 49.159.180.220 - - [09/Apr/2023 10:34:14] "POST /store_balance HTTP/1.1" 200 -
+[I 20230409 10:50:03 mall_server:267] SUCESS UPLOAD COMMODITY: 3a4f1224d68111eda57508002765f803
+[I 20230409 10:50:03 _internal:224] 49.159.180.220 - - [09/Apr/2023 10:50:03] "POST /upload_commodity HTTP/1.1" 200 -
+[I 20230409 11:11:56 mall_server:267] SUCESS UPLOAD COMMODITY: 491dd85fd68411ed9c4a08002765f803
+[I 20230409 11:11:56 _internal:224] 49.159.180.220 - - [09/Apr/2023 11:11:56] "POST /upload_commodity HTTP/1.1" 200 -
+[I 20230409 11:23:16 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230409 11:23:16 _internal:224] 49.159.180.220 - - [09/Apr/2023 11:23:16] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230409 11:30:28 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230409 11:30:28 _internal:224] 49.159.180.220 - - [09/Apr/2023 11:30:28] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230409 16:39:04 mall_server:208] Enroll A New Member fc5c7e5dd6b111ed941508002765f803
+[I 20230409 16:39:04 _internal:224] 49.159.180.220 - - [09/Apr/2023 16:39:04] "POST /enroll_member HTTP/1.1" 200 -
+[I 20230409 16:48:06 mall_server:273] COMMODITY STORE HAS BEEN VIEWED
+[I 20230409 16:48:06 _internal:224] 49.159.180.220 - - [09/Apr/2023 16:48:06] "GET /view_commodity HTTP/1.1" 200 -
+[I 20230409 16:48:24 mall_server:289] INVENTORY UPDATE COMMPLETE:TRADE 2 , REMAINIG 98
+[I 20230409 16:48:24 mall_server:296] DEBIT SUCESS:TRADE 40, REMAINING -40
+[I 20230409 16:48:24 mall_server:303] TRADE SUCESS:TRADE 40, REMAINING 440
+[I 20230409 16:48:24 _internal:224] 49.159.180.220 - - [09/Apr/2023 16:48:24] "POST /buy_commodity HTTP/1.1" 200 -

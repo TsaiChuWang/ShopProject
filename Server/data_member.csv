@@ -1,3 +1,3 @@
 _id,name_member,date_enrolled,email_member,password_member,balance_member
-8aeb94b1d41911edbc0308002765f803,test_member_B,20230406 09:22:48,test_member_B@gmail.com,12345678,300
-75094593d3ad11ed8d6f08002765f803,test_member_A,20230405 20:29:06,test_member_A@gmail.com,12345678,500
+fc5c7e5dd6b111ed941508002765f803,test_member_B,20230409 16:39:04,test_member_B@gmail.com,12345678,-40
+c667e7c9d67511edb74a08002765f803,test_member_A,20230409 09:28:04,test_member_A@gmail.com,12345678,440

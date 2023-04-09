@@ -172,6 +172,12 @@ def get_test():
     logging.info("GET TEST REQUEST")
     return "GET TEST REQUEST"
 
+#POST
+@app.route('/post_test' , methods=['POST'])
+def post_test():
+    request_data = request.get_json()
+    return jsonify(request_data)
+
 #還原資料庫
 @app.route('/clear_database' , methods=['GET'])
 def clear_database():
@@ -298,10 +304,6 @@ def buy_commodity():
     print("TRADE SUCESS:TRADE "+str(total_tade)+", REMAINING "+str(remaining_seller))
     return "SUCESS"
 
-    
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True,port=5125)
-
-#git remote set-url origin https://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@github.com/TsaiChuWang/ShopProject.git
-#git remote add origin https://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@github.com/TsaiChuWang/ShopProject.git
-
