@@ -174,6 +174,45 @@ std::string upload_commodity(std::string _id_seller, std::string name_commodity,
     return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
 }
 ```
+
+### View Commodity 檢視商品
+
+**Database**
+
+Find all the valid commodites and output
+
+**Output**
+
+Array of commodities
+
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| _id | string | 商品的uuid |
+| name_commodity | string | 商品的名稱 |
+| _id_seller | string | 賣家的uuid |
+| price | int | 商品的價格 |
+| inventory | int | 商品的剩餘庫存 |
+
+```cpp
+//查看商品列表
+std::string view_commodity() {
+    try
+    {
+        // you can pass http::InternetProtocol::V6 to Request to make an IPv6 request
+        http::Request request{ "http://140.113.213.57:5125/view_commodity" };
+
+        // send a get request
+        const auto response = request.send("GET");
+        std::cout << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
+        return std::string{ response.body.begin(), response.body.end() };
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Request failed, error: " << e.what() << '\n';
+    }
+    return "ERROR";
+}
+```
 ## About server
 
 ## About client
