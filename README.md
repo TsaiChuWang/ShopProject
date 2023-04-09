@@ -91,7 +91,46 @@ std::string login_member(std::string email_member, std::string password_member) 
     return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
 }
 ```
+### Store Balance 會員儲值
 
+**Input**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| _id | string | 會員的uuid |
+| balance_member | int | 會員儲值的額度，必須大於0且為整數 |
+
+**Database**
+
+Update the balance of specified member with adding balance posted.
+
+**Output**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| balance | int | 會員更新後的餘額 |
+
+```cpp
+//儲值到現有帳號
+int store_balance(std::string _id, int balance_member) {
+    
+    std::string balance = std::to_string(balance_member);
+    try
+    {
+        http::Request request{ "http://140.113.213.57:5125/store_balance" };
+        const std::string body = "{\"_id\": \"" + _id + "\", \"balance_member\": \"" + balance + "\"}";
+        const auto response = request.send("POST", body, {
+            {"Content-Type", "application/json"}
+            });
+        std::cout << "balance= " << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
+        return std::stoi(std::string{ response.body.begin(), response.body.end() });
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Request failed, error: " << e.what() << '\n';
+    }
+
+    return -1;
+}
+```
 ## About server
 
 ## About client
