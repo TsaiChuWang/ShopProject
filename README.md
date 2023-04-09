@@ -131,6 +131,49 @@ int store_balance(std::string _id, int balance_member) {
     return -1;
 }
 ```
+### Upload Commodity 上架商品
+
+**Input**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| _id_seller | string | 販售商品的賣家會員的uuid |
+| name_commodity | string | 商品名稱，可以重複 |
+| price | int | 商品單價，必須大於0且為整數 |
+| inventory | int | 商品的初始庫存量 |
+
+**Database**
+
+Insert a new data about commodity with atttributes
+_id,name_commodity,_id_seller,price,inventory
+
+**Output**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| _id_commodity | string | 商品的uuid |
+
+```cpp
+//上傳商品售賣
+std::string upload_commodity(std::string _id_seller, std::string name_commodity,int price, int inventory) {
+    std::string pricestr= std::to_string(price);
+    std::string inventorystr = std::to_string(inventory);
+    try
+    {
+        http::Request request{ "http://140.113.213.57:5125/upload_commodity" };
+        const std::string body = "{\"_id_seller\": \"" + _id_seller + "\", \"name_commodity\": \"" + name_commodity + "\", \"price\": \"" + pricestr + "\", \"inventory\": \"" + inventorystr+"\"}";
+        const auto response = request.send("POST", body, {
+            {"Content-Type", "application/json"}
+            });
+        std::cout << "_id= " << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
+        return std::string{ response.body.begin(), response.body.end() };
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Request failed, error: " << e.what() << '\n';
+    }
+
+    return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
+}
+```
 ## About server
 
 ## About client
