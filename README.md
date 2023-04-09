@@ -213,6 +213,52 @@ std::string view_commodity() {
     return "ERROR";
 }
 ```
+
+### Buy Commodity 購買商品
+
+**Input**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| _id_buyer | string | 買家會員的uuid |
+| _id_seller | string | 賣家會員的uuid |
+| _id_commdity | string | 購買商品的uuid |
+| number | int | 購買數量 |
+
+**Database**
+
+Count the number * price to be total trade money.
+- *Buyer* balance minuse total trade money
+- *Seller* balance add total trade money
+- *Commodity* inventory minuse number,if inventory is zero,delete the commodity
+  
+**Output**
+|Parameter| Type | Illustration |
+| :--: | :--: | :-- |
+| _id_commodity | string | 商品的uuid |
+
+```cpp
+//上傳商品售賣
+std::string upload_commodity(std::string _id_seller, std::string name_commodity,int price, int inventory) {
+    std::string pricestr= std::to_string(price);
+    std::string inventorystr = std::to_string(inventory);
+    try
+    {
+        http::Request request{ "http://140.113.213.57:5125/upload_commodity" };
+        const std::string body = "{\"_id_seller\": \"" + _id_seller + "\", \"name_commodity\": \"" + name_commodity + "\", \"price\": \"" + pricestr + "\", \"inventory\": \"" + inventorystr+"\"}";
+        const auto response = request.send("POST", body, {
+            {"Content-Type", "application/json"}
+            });
+        std::cout << "_id= " << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
+        return std::string{ response.body.begin(), response.body.end() };
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Request failed, error: " << e.what() << '\n';
+    }
+
+    return "ERROR:ENROLL NEW MEMBER ACCOUNT FAILED!";
+}
+```
 ## About server
 
 ## About client
