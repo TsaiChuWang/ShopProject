@@ -1,8 +1,5 @@
 # ShopProject
 
-
-![ 架構圖](./images/structure.png)
-
 ## Functions
 
 ### Enroll Member 註冊會員
@@ -260,6 +257,29 @@ std::string upload_commodity(std::string _id_buyer, std::string _id_seller, std:
 ```
 ## About server
 
+![ 架構圖](./images/structure.png)
+
+使用 **表現層狀態轉換 (Representational state transfer)** 風格建立伺服器，根基於超文字傳輸協定（HTTP）之上，提供全球資訊網絡服務。
+
+### Features
+
+- Uniform Interface：每個資源都可以通過**URI**存取到。也就是一個個可以認知的資源，都可以通過唯一的URI確定。
+- Stateless：無狀態。
+- Cacheable：可快取。
+- Client-Server：客戶伺服器分離模式，任何一個客戶端與伺服器都是可替換的。
+- Layered System：分層的系統，客戶端不知道他聯絡的是不是最終伺服器。
+- Code on Demand（可選）：伺服器可以將能力擴充到客戶端，如果客戶端可以執行的話。這個功能是可選擇的。
+
+### Why use the REST style to set up the server?
+
+- 可更高效利用快取來提高回應速度
+- 通訊本身的無狀態性可以讓不同的伺服器的處理一系列請求中的不同請求，提高伺服器的擴充性
+- 瀏覽器即可作為客戶端，簡化軟體需求
+- 相對於其他疊加在HTTP之上的機制，REST的軟體相依性更小
+- 不需要額外的資源發現機制
+- 在軟體技術演進中的長期的相容性更好
+
+![Resful](./images/resful.png)
 ## About client
 
 |Folder| Illustration|
@@ -267,8 +287,11 @@ std::string upload_commodity(std::string _id_buyer, std::string _id_seller, std:
 | HTTPRequestGetTest | Project to test http request about get ,z.B:http://140.113.213.57:5125/view_commodity |
 | HTTPRequestPostTest | Project to test http request about post ,z.B:http://140.113.213.57:5125/enroll_member |
 | FunctionYest |Project to test all the functions with response of sting formed in JSON |
+| FunctionYest |Project to test all the functions with response of sting formed in JSON |
 
 ## About reference
 
 [HTTPRequest](https://github.com/elnormous/HTTPRequest)
+
+[API](https://www.techtarget.com/searchapparchitecture/definition/RESTful-API)
 
