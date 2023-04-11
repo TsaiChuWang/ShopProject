@@ -286,8 +286,29 @@ std::string upload_commodity(std::string _id_buyer, std::string _id_seller, std:
 | :--: | :-- |
 | HTTPRequestGetTest | Project to test http request about get ,z.B:http://140.113.213.57:5125/view_commodity |
 | HTTPRequestPostTest | Project to test http request about post ,z.B:http://140.113.213.57:5125/enroll_member |
-| FunctionYest |Project to test all the functions with response of sting formed in JSON |
-| FunctionYest |Project to test all the functions with response of sting formed in JSON |
+| FunctionTest |Project to test all the functions with response of sting formed in JSON |
+| ResponseWithString |Project to test all the functions with response of sting formed in String |
+
+### First Spilit
+
+分割商品陣列的函數 Function to split an array of items
+
+![Function](./images/ShopProject-spilit.drawio.png)
+
+一次分割函數見 ResponseWithString 的 firstSpilitCommosity 函數
+
+```cpp
+//商品列表:一次分割
+const std::vector<std::string> firstSpilitCommosity(std::string& str) {
+    std::string pattern = ":";
+    std::vector<std::string> ret = split(str, pattern);
+
+    for (auto& s : ret) {
+        std::cout << s << "\n";
+    }
+    return ret;
+}
+```
 
 ## About reference
 
